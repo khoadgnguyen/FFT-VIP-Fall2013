@@ -1,0 +1,9 @@
+CC=gcc
+CFLAGS=-lm
+DEP= testing_fft_time.c testing_sender.c fft.c
+
+all: $(DEP)
+	$(CC) $(DEP) $(CFLAGS) -o testing 
+
+clean:
+	rm -rf testing 
